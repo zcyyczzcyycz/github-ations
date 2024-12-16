@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme')
+      const systemDarkMode =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>VuePress</title><meta name="description" content="My first VuePress Site">
+    <link rel="preload" href="/github-ations/assets/style-PoWje89h.css" as="style"><link rel="stylesheet" href="/github-ations/assets/style-PoWje89h.css">
+    <link rel="modulepreload" href="/github-ations/assets/app-DHaOxhBG.js"><link rel="modulepreload" href="/github-ations/assets/404.html-C6dFvxTJ.js">
+    <link rel="prefetch" href="/github-ations/assets/get-started.html-CGDaWE1T.js" as="script"><link rel="prefetch" href="/github-ations/assets/index.html-DUBMy77O.js" as="script"><link rel="prefetch" href="/github-ations/assets/setupDevtools-7MC2TMWH-ukXI_Q7T.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-67c08c1d><main class="page" data-v-67c08c1d><div class="theme-default-content" vp-content data-v-67c08c1d><h1 data-v-67c08c1d>404</h1><blockquote data-v-67c08c1d>There&#39;s nothing here.</blockquote><a class="route-link" href="/github-ations/" data-v-67c08c1d>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/github-ations/assets/app-DHaOxhBG.js" defer></script>
+  </body>
+</html>
