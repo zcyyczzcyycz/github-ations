@@ -17,7 +17,7 @@ features:
   - title: Vue-Powered
     details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
   - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
+    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA  once a page is loaded.
   - title: Themes
     details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
   - title: Plugins
