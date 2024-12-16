@@ -1,7 +1,7 @@
 name: docs
 
 on:
-  # 每当 push 到 main 分支时触发部署（注意：这里应该是 main 而不是 master，除非你的默认分支仍然是 master）
+  # 当 push 到 main 分支时触发部署（确保你的默认分支设置为 main）
   push:
     branches: [master]
   # 手动触发部署
@@ -16,23 +16,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 设置 pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          # 明确指定 pnpm 的版本
-          version: 6.24.2  # 你可以根据需要替换为具体的版本号或版本范围
-
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
 
       - name: 安装依赖
-        run: pnpm install --frozen-lockfile
+        run: npm install --frozen-lockfile
+        # 注意：确保你有一个 package-lock.json 文件来与 --frozen-lockfile 一起使用
 
       - name: 构建 VuePress 站点
-        run: pnpm docs:build
+        run: npm run docs:build
+        # 确保你的 package.json 中有一个名为 "docs:build" 的脚本
 
       - name: 部署到 GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
